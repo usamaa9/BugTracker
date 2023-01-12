@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>$(MSBuildProjectName).xml</DocumentationFile>
+    <!-- Workaround for https://github.com/dotnet/roslyn/issues/53720 -->
+    <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug' AND $(IsTestProject) != 'true'">
+    <!-- Missing XML Documentation -->
+    <WarningsAsErrors>;CS1591</WarningsAsErrors>
+  </PropertyGroup>
+</Project>

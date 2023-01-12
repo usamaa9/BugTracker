@@ -1,0 +1,22 @@
+<Project>
+  <ItemGroup Condition="'$(IsApiProject)' == 'true'">
+    <SonarQubeSetting Include="sonar.coverage.exclusions">
+      <Value>SwaggerExamples/*.cs</Value>
+    </SonarQubeSetting>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(IsApiProject)' == 'true'">
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.4.0" />
+  </ItemGroup>
+
+  <Target
+    Name="GenerateSwaggerDocPostBuild"
+    Condition="'$(IsApiProject)' == 'true' AND '$(Configuration)' == 'Release'"
+    AfterTargets="PostBuildEvent">
+    <Exec Command="dotnet tool restore" />
+    <Exec
+      EnvironmentVariables="ASPNETCORE_ENVIRONMENT=CI"
+      Command="dotnet swagger tofile --output swagger.json $(OutputPath)$(AssemblyName).dll v1" />
+  </Target>
+</Project>
