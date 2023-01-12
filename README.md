@@ -1,3 +1,3 @@
-# Purple Rock Repository
+# Bug Tracker
 
-Add some read me.
+A simple bug tracker application.
