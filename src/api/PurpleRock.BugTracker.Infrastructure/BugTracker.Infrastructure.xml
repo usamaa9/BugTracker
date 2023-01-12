@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BugTracker.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="P:BugTracker.Infrastructure.Persistence.Dto.BugDto.Title">
+            <summary>
+            Title of the bug.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Infrastructure.Persistence.Dto.BugDto.Description">
+            <summary>
+            Description of the bug.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Infrastructure.Persistence.Dto.BugDto.DateOpened">
+            <summary>
+            Date the bug was opened.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Infrastructure.Persistence.Dto.BugDto.DateClosed">
+            <summary>
+            Date the bug was closed.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Infrastructure.Persistence.Dto.BugDto.IsOpen">
+            <summary>
+            True if the bug is open, false if closed.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Infrastructure.Persistence.Dto.BugDto.AssignedTo">
+            <summary>
+            The person the bug is assigned to.
+            </summary>
+        </member>
+    </members>
+</doc>

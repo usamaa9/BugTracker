@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BugTracker.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:BugTracker.WebApi.Controllers.v1.BaseV1Controller">
+            <summary>
+            Base controller for all controllers.
+            </summary>
+        </member>
+        <member name="M:BugTracker.WebApi.Controllers.v1.BaseV1Controller.#ctor(PurpleRock.Application.Common.Commands.ICommandBus)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BugTracker.WebApi.Controllers.v1.BaseV1Controller"/> class.
+            </summary>
+            <param name="commandBus"><see cref="T:PurpleRock.Application.Common.Commands.ICommandBus"/>.</param>
+        </member>
+        <member name="P:BugTracker.WebApi.Controllers.v1.BaseV1Controller.CommandBus">
+            <summary>
+            Command bus.
+            </summary>
+        </member>
+        <member name="M:BugTracker.WebApi.Controllers.v1.BugV1Controller.#ctor(PurpleRock.Application.Common.Commands.ICommandBus)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BugTracker.WebApi.Controllers.v1.BugV1Controller"/> class.
+            </summary>
+            <param name="commandBus"><see cref="T:PurpleRock.Application.Common.Commands.ICommandBus"/>.</param>
+        </member>
+        <member name="T:BugTracker.WebApi.Startup">
+            <summary>
+            Startup class configures services and the app's request pipeline.
+            </summary>
+        </member>
+        <member name="M:BugTracker.WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BugTracker.WebApi.Startup"/> class.
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BugTracker.WebApi.Startup.ConfigureServicesHook(Microsoft.Extensions.DependencyInjection.IServiceCollection,PurpleRock.Application.Common.Configuration.AppOptions)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

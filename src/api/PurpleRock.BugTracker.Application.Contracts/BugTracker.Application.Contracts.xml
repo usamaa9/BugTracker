@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BugTracker.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="P:BugTracker.Application.Contracts.Requests.CreateBugRequest.Title">
+            <summary>
+            Title of the bug.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Application.Contracts.Requests.CreateBugRequest.Description">
+            <summary>
+            Description of the bug.
+            </summary>
+        </member>
+    </members>
+</doc>

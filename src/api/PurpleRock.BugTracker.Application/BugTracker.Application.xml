@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BugTracker.Application</name>
+    </assembly>
+    <members>
+        <member name="P:BugTracker.Application.Entities.Bug.Id">
+            <summary>
+            Unique identifier of the bug.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Application.Entities.Bug.Title">
+            <summary>
+            Title of the bug.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Application.Entities.Bug.Description">
+            <summary>
+            Description of the bug.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Application.Entities.Bug.DateOpened">
+            <summary>
+            Date the bug was opened.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Application.Entities.Bug.DateClosed">
+            <summary>
+            Date the bug was closed
+            </summary>
+        </member>
+        <member name="P:BugTracker.Application.Entities.Bug.IsOpen">
+            <summary>
+            True if the bug is open, false if closed.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Application.Entities.Bug.AssignedTo">
+            <summary>
+            The person the bug is assigned to.
+            </summary>
+        </member>
+        <member name="M:BugTracker.Application.Entities.Bug.Generate">
+            <inheritdoc />
+        </member>
+        <member name="P:BugTracker.Application.Entities.Person.Id">
+            <summary>
+            Person's unique identifier.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Application.Entities.Person.Name">
+            <summary>
+            Name of person.
+            </summary>
+        </member>
+        <member name="T:BugTracker.Application.Features.CreateBug.CreateBugCommand">
+            <summary>
+            Command to create a bug.
+            <seealso cref="T:BugTracker.Application.Features.CreateBug.CreateBugCommandHandler"/>
+            </summary>
+        </member>
+        <member name="M:BugTracker.Application.Features.CreateBug.CreateBugCommand.#ctor(BugTracker.Application.Contracts.Requests.CreateBugRequest,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BugTracker.Application.Features.CreateBug.CreateBugCommand"/> class.
+            </summary>
+            <param name="request"></param>
+            <param name="locationPath"></param>
+        </member>
+        <member name="P:BugTracker.Application.Features.CreateBug.CreateBugCommand.Request">
+            <summary>
+            Request containing the bug creation details.
+            </summary>
+        </member>
+        <member name="P:BugTracker.Application.Features.CreateBug.CreateBugCommand.LocationPath">
+            <summary>
+            The path to the newly created bug.
+            </summary>
+        </member>
+        <member name="T:BugTracker.Application.Persistence.IReadBugRepository">
+            <summary>
+            Repository for managing read operations on the bug store.
+            </summary>
+        </member>
+        <member name="M:BugTracker.Application.Persistence.IReadBugRepository.GetAll">
+            <summary>
+            Returns a list of all bugs.
+            </summary>
+            <returns>A list of all <see cref="T:BugTracker.Application.Entities.Bug"/> objects.</returns>
+        </member>
+        <member name="M:BugTracker.Application.Persistence.IReadBugRepository.Get(System.String)">
+            <summary>
+            Retrieves a bug using its unique identifier.
+            </summary>
+            <param name="bugId">The id of the bug to retrieve.</param>
+            <returns>A <see cref="T:BugTracker.Application.Entities.Bug"/> object that represents the bug.</returns>
+            <exception cref="T:PurpleRock.Application.Common.Exceptions.NotFoundException"></exception>
+        </member>
+        <member name="T:BugTracker.Application.Persistence.IReadPersonRepository">
+            <summary>
+            Repository for managing read operations on the person store.
+            </summary>
+        </member>
+        <member name="M:BugTracker.Application.Persistence.IReadPersonRepository.GetAll">
+            <summary>
+            Returns a list of all people.
+            </summary>
+            <returns>A list of all <see cref="T:BugTracker.Application.Entities.Person"/> objects.</returns>
+        </member>
+        <member name="M:BugTracker.Application.Persistence.IReadPersonRepository.Get(System.String)">
+            <summary>
+            Retrieves a person using its unique identifier.
+            </summary>
+            <param name="personId">The id of the person to retrieve.</param>
+            <returns>A <see cref="T:BugTracker.Application.Entities.Person"/> object that represents the person.</returns>
+            <exception cref="T:PurpleRock.Application.Common.Exceptions.NotFoundException"></exception>
+        </member>
+        <member name="T:BugTracker.Application.Persistence.IWriteBugRepository">
+            <summary>
+            Repository for managing write operations on the bug store.
+            </summary>
+        </member>
+        <member name="M:BugTracker.Application.Persistence.IWriteBugRepository.CreateAsync(BugTracker.Application.Entities.Bug)">
+            <summary>
+            Stores a new bug.
+            </summary>
+            <param name="bug">The bug to store.</param>
+            <returns>True if the bug was created successfully.</returns>
+        </member>
+    </members>
+</doc>

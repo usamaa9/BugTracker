@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{CB1E6D1B-1D7F-4179-A387-EF4789E26AC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{27643402-334D-4F81-A469-E80160C25E57}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\.editorconfig = ..\..\.editorconfig
+		..\..\Directory.Build.props = ..\..\Directory.Build.props
+		..\..\nuget.config = ..\..\nuget.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build-props", "build-props", "{B7FD2202-D30E-4FC5-8FA0-825491C6364E}"
+	ProjectSection(SolutionItems) = preProject
+		build-props\AddCommonTestNugetPackages.props = build-props\AddCommonTestNugetPackages.props
+		build-props\GenerateDocumentation.props = build-props\GenerateDocumentation.props
+		build-props\GenerateSwaggerDoc.props = build-props\GenerateSwaggerDoc.props
+		build-props\MakeInternalsVisibleToTestProjects.props = build-props\MakeInternalsVisibleToTestProjects.props
+		build-props\PackNuGetProperties.props = build-props\PackNuGetProperties.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PurpleRock.Application.Common", "..\common\PurpleRock.Application.Common\PurpleRock.Application.Common.csproj", "{ADE394A5-7779-4C47-81FB-96885C3E0B5D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PurpleRock.WebApi.Common", "..\common\PurpleRock.WebApi.Common\PurpleRock.WebApi.Common.csproj", "{997B6DB0-F124-4CFC-A28C-D0458D650E50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PurpleRock.BugTracker.Application.Contracts", "PurpleRock.BugTracker.Application.Contracts\PurpleRock.BugTracker.Application.Contracts.csproj", "{82B7A945-2DEC-4FD5-BFDE-F007142E7A5A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PurpleRock.BugTracker.Application", "PurpleRock.BugTracker.Application\PurpleRock.BugTracker.Application.csproj", "{B4137829-0780-4452-B207-0BC10ECFFA37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PurpleRock.BugTracker.Infrastructure", "PurpleRock.BugTracker.Infrastructure\PurpleRock.BugTracker.Infrastructure.csproj", "{71D41559-2193-487D-815D-FC31E1728D07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PurpleRock.BugTracker.WebApi", "PurpleRock.BugTracker.WebApi\PurpleRock.BugTracker.WebApi.csproj", "{2A56E14D-C17F-44F4-BFF5-E250242EE078}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADE394A5-7779-4C47-81FB-96885C3E0B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE394A5-7779-4C47-81FB-96885C3E0B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE394A5-7779-4C47-81FB-96885C3E0B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE394A5-7779-4C47-81FB-96885C3E0B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997B6DB0-F124-4CFC-A28C-D0458D650E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997B6DB0-F124-4CFC-A28C-D0458D650E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997B6DB0-F124-4CFC-A28C-D0458D650E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997B6DB0-F124-4CFC-A28C-D0458D650E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82B7A945-2DEC-4FD5-BFDE-F007142E7A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82B7A945-2DEC-4FD5-BFDE-F007142E7A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82B7A945-2DEC-4FD5-BFDE-F007142E7A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82B7A945-2DEC-4FD5-BFDE-F007142E7A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4137829-0780-4452-B207-0BC10ECFFA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4137829-0780-4452-B207-0BC10ECFFA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4137829-0780-4452-B207-0BC10ECFFA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4137829-0780-4452-B207-0BC10ECFFA37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D41559-2193-487D-815D-FC31E1728D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D41559-2193-487D-815D-FC31E1728D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D41559-2193-487D-815D-FC31E1728D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D41559-2193-487D-815D-FC31E1728D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A56E14D-C17F-44F4-BFF5-E250242EE078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A56E14D-C17F-44F4-BFF5-E250242EE078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A56E14D-C17F-44F4-BFF5-E250242EE078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A56E14D-C17F-44F4-BFF5-E250242EE078}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7FD2202-D30E-4FC5-8FA0-825491C6364E} = {27643402-334D-4F81-A469-E80160C25E57}
+		{ADE394A5-7779-4C47-81FB-96885C3E0B5D} = {CB1E6D1B-1D7F-4179-A387-EF4789E26AC2}
+		{997B6DB0-F124-4CFC-A28C-D0458D650E50} = {CB1E6D1B-1D7F-4179-A387-EF4789E26AC2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {964E7CE9-CBDA-431B-A99B-FD29990A949E}
+	EndGlobalSection
+EndGlobal
