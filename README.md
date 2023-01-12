@@ -23,3 +23,6 @@ Currently, the UI only supports the following features:
 - View bug details
 - Add a bug
 
+# Improvements
+- Unit tests for WebApi project.
+- The front end has the api url hardcoded which should be extracted into a config.
