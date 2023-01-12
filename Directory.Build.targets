@@ -1,0 +1,10 @@
+<Project>
+  <!--
+    Directory.Build.targets gets applied late in the build cycle.
+    Empty RootNamespace in Directory.Build.props not working
+    https://github.com/dotnet/sdk/issues/11811.
+    -->
+  <PropertyGroup Condition="'$(IsUnitTestsProject)' == 'true'">
+    <RootNamespace></RootNamespace>
+  </PropertyGroup>
+</Project>

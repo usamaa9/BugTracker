@@ -1,0 +1,23 @@
+<Project>
+
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <Deterministic>true</Deterministic>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsApiProject Condition="$(MSBuildProjectName.EndsWith('Api'))">true</IsApiProject>
+    <IsUnitTestsProject Condition="$(MSBuildProjectName.EndsWith('Tests'))">true</IsUnitTestsProject>
+    <IsTestProject Condition="$(MSBuildProjectName.EndsWith('Tests'))
+                       OR $(MSBuildProjectName.EndsWith('Specs'))
+                       OR $(MSBuildProjectName.EndsWith('TestKit'))
+                       OR '$(MSBuildProjectName)' == 'PurpleRock.UnitTests.Framework'">true</IsTestProject>
+    <Props_PackNuGet>$(MSBuildThisFileDirectory)src/build-props/PackNuGetProperties.props</Props_PackNuGet>
+    <DirectoryBuildPropsPath>$(MSBuildThisFileDirectory)</DirectoryBuildPropsPath>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)src/build-props/GenerateDocumentation.props" />
+  <Import Project="$(MSBuildThisFileDirectory)src/build-props/GenerateSwaggerDoc.props" />
+  <Import Project="$(MSBuildThisFileDirectory)src/build-props/MakeInternalsVisibleToTestProjects.props" />
+  <Import Project="$(MSBuildThisFileDirectory)src/build-props/AddCommonTestNugetPackages.props" />
+
+</Project>

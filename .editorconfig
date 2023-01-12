@@ -1,0 +1,91 @@
+# Remove the line below if you want to inherit .editorconfig settings from higher directories
+root = true
+
+###############################
+# Core EditorConfig Options   #
+###############################
+# All files
+[*]
+indent_style = space
+trim_trailing_whitespace = true
+charset = utf-8
+
+# New line preferences
+end_of_line = lf
+insert_final_newline = true
+
+# Front-end dev
+[*.{tsx,ts,js,jsx,json,css,scss,sass}]
+indent_size = 2
+max_line_length = 110
+quote_type = single
+tab_width = 2
+
+# Storybook
+[*.stories.{tsx,ts,js,jsx}]
+indent_size = 2
+max_line_length = 140
+quote_type = single
+tab_width = 2
+
+# Back-end dev
+[*.{cs,csx}]
+indent_size = 4
+max_line_length = 130
+tab_width = 4
+
+# XML project files
+[*.csproj]
+indent_size = 2
+
+# XML config files
+[*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct}]
+indent_size = 2
+
+[*.{xml,xsd}]
+max_line_length = off
+indent_size = 2
+
+# PowerShell scripts
+[*.ps1]
+indent_size = 4
+tab_width = 4
+
+# YAML files - pipelines
+[*.{yml,yaml}]
+max_line_length = 160
+indent_size = 2
+tab_width = 2
+
+# dot rc config files
+[.*rc]
+indent_size = 2
+
+# GO
+[*.go]
+indent_size = 4
+tab_width = 4
+indent_style = space
+trim_trailing_whitespace = true
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+[*Exception{Behavior,HandlerMiddleware}.cs]
+# Do not catch general exception types
+dotnet_diagnostic.CA1031.severity = none
+
+[*Exception.cs]
+# Implement standard exception constructors
+dotnet_diagnostic.CA1032.severity = silent
+
+# "ISerializable" should be implemented correctly
+dotnet_diagnostic.S3925.severity = none
+
+[{*GlobalUsings.cs}]
+# Using directive is unnecessary
+dotnet_diagnostic.IDE0005.severity = none
+
+[{**/Responses/**.cs,**/Requests/**.cs}]
+# Non-nullable field is uninitialized. Consider declaring as nullable.
+dotnet_diagnostic.CS8618.severity = none
