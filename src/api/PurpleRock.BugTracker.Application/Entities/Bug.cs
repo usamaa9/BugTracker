@@ -1,5 +1,4 @@
 using Bogus;
-using PurpleRock.Application.Common;
 
 namespace PurpleRock.BugTracker.Application.Entities;
 
@@ -41,6 +40,7 @@ public class Bug : IExampleProvider<Bug>
     public Person? AssignedTo { get; set; }
 
     /// <inheritdoc />
+    [ExcludeFromCodeCoverage]
     public Bug Generate()
     {
         return new Faker<Bug>()

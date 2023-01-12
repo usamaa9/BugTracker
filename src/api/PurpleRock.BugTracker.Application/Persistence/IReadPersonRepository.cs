@@ -6,12 +6,6 @@ namespace PurpleRock.BugTracker.Application.Persistence;
 public interface IReadPersonRepository
 {
     /// <summary>
-    /// Returns a list of all people.
-    /// </summary>
-    /// <returns>A list of all <see cref="Person"/> objects.</returns>
-    Task<IReadOnlyCollection<Person>> GetAllAsync();
-
-    /// <summary>
     /// Retrieves a person using its unique identifier.
     /// </summary>
     /// <param name="personId">The id of the person to retrieve.</param>

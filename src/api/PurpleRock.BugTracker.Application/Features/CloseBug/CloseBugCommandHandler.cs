@@ -23,12 +23,9 @@ public class CloseBugCommandHandler : IRequestHandler<CloseBugCommand, Result<Un
 
         var existingBug = await _readBugRepository.GetAsync(bugId);
 
-        // can close a bug with no person assigned?
-
         existingBug.DateClosed = DateTime.UtcNow;
 
         await _writeBugRepository.UpdateAsync(existingBug);
-
 
         return Result.NoContent<Unit>();
     }

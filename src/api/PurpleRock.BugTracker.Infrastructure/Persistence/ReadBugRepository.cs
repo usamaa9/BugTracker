@@ -4,21 +4,21 @@ public class ReadBugRepository : IReadBugRepository
 {
     private readonly IModelMapper<BugDto, Bug> _mapper;
     private readonly IReadPersonRepository _readPersonRepository;
-    private readonly IRepository<BugDto> _repository;
+    private readonly IRepository<BugDto> _cosmosRepository;
 
     public ReadBugRepository(
-        IRepository<BugDto> repository,
+        IRepository<BugDto> cosmosRepository,
         IReadPersonRepository readPersonRepository,
         IModelMapper<BugDto, Bug> mapper)
     {
-        _repository = repository;
+        _cosmosRepository = cosmosRepository;
         _mapper = mapper;
         _readPersonRepository = readPersonRepository;
     }
 
     public async Task<IReadOnlyCollection<Bug>> GetAllAsync()
     {
-        var dtos = await _repository.GetByQueryAsync("SELECT * from c");
+        var dtos = await _cosmosRepository.GetByQueryAsync("SELECT * from c");
 
         var bos = new List<Bug>();
 
@@ -36,7 +36,7 @@ public class ReadBugRepository : IReadBugRepository
     {
         try
         {
-            var dto = await _repository.GetAsync(bugId);
+            var dto = await _cosmosRepository.GetAsync(bugId);
             var bo = _mapper.Map(dto);
             if (dto.PersonAssignedId != null) bo.AssignedTo = await _readPersonRepository.GetAsync(dto.PersonAssignedId);
 

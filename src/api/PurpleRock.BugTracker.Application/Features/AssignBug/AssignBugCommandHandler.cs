@@ -26,7 +26,6 @@ public class AssignBugCommandHandler : IRequestHandler<AssignBugCommand, Result<
 
         var existingBug = await _readBugRepository.GetAsync(bugId);
         var person = await _readPersonRepository.GetAsync(request.PersonId);
-        if (person == null) return Result.BadRequest<Unit>($"person with id {request.PersonId} doesn't exist");
 
         existingBug.AssignedTo = person;
 

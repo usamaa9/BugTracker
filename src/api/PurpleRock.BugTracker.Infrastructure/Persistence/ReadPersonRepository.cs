@@ -14,12 +14,6 @@ public class ReadPersonRepository : IReadPersonRepository
         _mapper = mapper;
     }
 
-    public async Task<IReadOnlyCollection<Person>> GetAllAsync()
-    {
-        var dto = await _repository.GetByQueryAsync("SELECT * from c");
-        return dto.Select(x => _mapper.Map(x)).ToList();
-    }
-
     public async Task<Person?> GetAsync(string personId)
     {
         try

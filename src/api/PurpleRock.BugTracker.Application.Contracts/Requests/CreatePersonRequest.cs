@@ -3,6 +3,7 @@ namespace PurpleRock.BugTracker.Application.Contracts.Requests;
 /// <summary>
 /// Request for adding a person.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public record CreatePersonRequest : IExampleProvider<CreatePersonRequest>
 {
     /// <summary>

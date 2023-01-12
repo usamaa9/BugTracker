@@ -1,5 +1,9 @@
 namespace PurpleRock.BugTracker.Application.Contracts.Responses;
 
+/// <summary>
+/// Person Details
+/// </summary>
+[ExcludeFromCodeCoverage]
 public class PersonResponse : IExampleProvider<PersonResponse>
 {
     /// <summary>

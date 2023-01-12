@@ -1,5 +1,9 @@
 namespace PurpleRock.BugTracker.Application.Contracts.Requests;
 
+/// <summary>
+/// Create Bug request.
+/// </summary>
+[ExcludeFromCodeCoverage]
 public record CreateBugRequest : IExampleProvider<CreateBugRequest>
 {
     /// <summary>

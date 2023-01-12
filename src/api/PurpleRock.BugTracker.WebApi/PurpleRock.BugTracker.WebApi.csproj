@@ -10,4 +10,9 @@
     <ProjectReference Include="..\PurpleRock.BugTracker.Infrastructure\PurpleRock.BugTracker.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="Swashbuckle.AspNetCore.Newtonsoft" Version="6.5.0" />
+    <PackageReference Update="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+  </ItemGroup>
+
 </Project>

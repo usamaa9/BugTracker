@@ -1,5 +1,9 @@
 namespace PurpleRock.BugTracker.Application.Contracts.Responses;
 
+/// <summary>
+/// Bug Details response.
+/// </summary>
+[ExcludeFromCodeCoverage]
 public class BugDetailsResponse : IExampleProvider<BugDetailsResponse>
 {
     /// <summary>
