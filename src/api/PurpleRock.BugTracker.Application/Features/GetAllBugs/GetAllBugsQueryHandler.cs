@@ -17,7 +17,7 @@ public class GetAllBugsQueryHandler : IRequestHandler<GetAllBugsQuery, Result<IR
         CancellationToken cancellationToken)
     {
         var bugs = await _readBugRepository.GetAllAsync();
-        if (request.Status!.ToLower() == "open") bugs = bugs.Where(x => x.IsOpen).ToArray();
+        if (request.Status != null && request.Status.ToLower() == "open") bugs = bugs.Where(x => x.IsOpen).ToArray();
         var response = bugs.Select(x => _mapper.Map(x)).ToArray();
         return Result.Ok((IReadOnlyCollection<BugDetailsResponse>)response);
     }
